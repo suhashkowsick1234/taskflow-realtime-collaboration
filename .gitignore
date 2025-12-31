@@ -1,0 +1,20 @@
+# Node
+node_modules
+npm-debug.log
+yarn.lock
+
+# Env files
+.env
+.env.*
+!.env.example
+
+# Prisma
+prisma/dev.db
+prisma/*.db
+
+# Build outputs
+dist
+build
+
+# Docker
+postgres_data

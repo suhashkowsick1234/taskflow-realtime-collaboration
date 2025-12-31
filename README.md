@@ -1,63 +1,52 @@
-# 🚀 Collaborative Task Manager
+# 🚀 Collaborative Task Manager (TaskFlow)
 
-A **full‑stack, real‑time collaborative task management system** built with **React, Node.js, Prisma, PostgreSQL, Socket.IO, and Docker**.  
-The application allows multiple users to create, assign, track, and update tasks with **live updates and notifications** — all containerized and runnable with a **single Docker command**.
+A full-stack, **real-time collaborative task management system** built with **React, Node.js, Prisma, PostgreSQL, Socket.IO, and Docker**.
+
+This project was developed as a **final-year learning project** to understand **real-time communication, authentication, task workflows, and basic system design** used in modern web applications.
 
 ---
 
 ## ✨ Key Features
 
 ### 🔐 Authentication & Authorization
-- Secure user registration and login
-- Password hashing with **bcrypt**
-- JWT‑based authentication
-- Protected routes (frontend + backend)
+- User registration and login
+- Password hashing with bcrypt
+- JWT-based authentication
+- Protected routes on both frontend and backend
 
 ### ✅ Task Management
-- Create tasks with:
+- Create, update, and delete tasks
+- Task fields include:
   - Title
   - Priority (LOW / MEDIUM / HIGH / URGENT)
   - Due date
   - Status (TODO / IN_PROGRESS / REVIEW / COMPLETED)
-- Update task status in real time
-- Delete tasks
+- Real-time task status updates
 
 ### 👥 Task Assignment
 - Assign tasks to yourself or other users
-- Display assigned user **name instead of ID**
-- Separate views:
+- Display assigned user name
+- Task views:
   - All tasks
   - Created by me
   - Assigned to me
   - Overdue tasks
 
-### 🔔 Real‑Time Updates (Socket.IO)
-- Live task updates across all connected users
-- Instant UI updates without page refresh
-- Real‑time toast notification when:
-  - A task is assigned to you
+### 🔔 Real-Time Updates (Socket.IO)
+- Live task updates across connected users
+- UI updates instantly without page refresh
+- Real-time notifications when:
+  - A task is assigned
   - A task is updated or deleted
-
-### ⚡ Modern Frontend Stack
-- **React + TypeScript**
-- **React Query** for server state management
-- **Axios** with auth interceptor
-- Component‑based UI with clean state handling
-
-### 🐳 Dockerized Setup
-- Fully containerized **Frontend, Backend, and Database**
-- One‑command startup using **docker‑compose**
-- Automatic Prisma migrations on container start
 
 ---
 
-## 🧱 Tech Stack
+## 🧰 Tech Stack
 
 ### Frontend
 - React
 - TypeScript
 - React Router
-- React Query
 - Axios
 - Socket.IO Client
 
@@ -72,13 +61,13 @@ The application allows multiple users to create, assign, track, and update tasks
 ### Database
 - PostgreSQL
 
-### DevOps
+### DevOps / Tools
 - Docker
 - Docker Compose
 
 ---
 
-## 🏗️ System Architecture
+## 🏗️ System Architecture (High Level)
 
 ```
 ┌──────────────────┐
@@ -110,21 +99,28 @@ The application allows multiple users to create, assign, track, and update tasks
 └───────────────────────────┘
 ```
 
-### 🔄 Real‑Time Flow
-1. User performs action (create / update / assign task)
-2. Backend updates database via Prisma
-3. Backend emits Socket.IO event
-4. All connected clients update UI instantly
+- REST APIs handle authentication and task operations
+- Socket.IO enables real-time synchronization
+- Database changes trigger Socket.IO events
+- All connected clients receive updates instantly
 
 ---
 
-## 🐳 Docker Setup
+## 🔄 Real-Time Flow
 
-### Prerequisites
-- Docker Desktop installed
-- Docker Compose enabled
+1. User performs an action (create / update / assign task)
+2. Backend updates the database using Prisma
+3. Backend emits a Socket.IO event
+4. Connected clients update their UI in real time
 
-### One‑Command Start
+---
+
+## 🐳 Docker Setup (Optional)
+
+The project supports Docker Compose for simplified local setup of:
+- Frontend
+- Backend
+- Database
 
 ```bash
 docker-compose up --build
@@ -206,20 +202,16 @@ Can be deployed to:
 
 ---
 
-## 👤 Author
+👤 Author
 
-Built as a **full‑stack real‑time systems project** demonstrating:
-- Modern frontend architecture
-- Scalable backend design
-- Real‑time communication
-- Production‑grade Dockerization
-
+Suhash Kowsick
+Aspiring Software Engineer
+Interested in backend development, real-time systems, and full-stack applications
 ---
 
 ## ⭐ Final Note
 
-This project showcases **end‑to‑end system design**, not just CRUD.
-It highlights how real‑time applications are built, scaled, and deployed in modern production environments.
+This project focuses on demonstrating real-time collaboration patterns and core full-stack development concepts in a practical application.
 
 ---
 

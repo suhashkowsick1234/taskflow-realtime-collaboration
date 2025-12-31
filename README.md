@@ -205,7 +205,7 @@ Can be deployed to:
 👤 Author
 
 Suhash Kowsick
-Aspiring Software Engineer
+Aspiring Software Engineer  |
 Interested in backend development, real-time systems, and full-stack applications
 ---
 
